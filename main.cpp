@@ -50,27 +50,27 @@ int main() {
 	}
 
 	Table table(student, people);
-	int command;
+	char command;
 	char grade;
 	while (1) {
 		information();
 		cin>>command;
 		switch(command) {
-			case 0:
+			case '0':
 				return 0;
-			case 1:
+			case '1':
 				table.sortByNumber();
 				table.print();
 				break;
-			case 2:
+			case '2':
 				table.sortByName();
 				table.print();
 				break;
-			case 3:
+			case '3':
 				table.sortByTotalScore();
 				table.print();
 				break;
-			case 4:
+			case '4':
 				cin>>grade;
 				table.printByGrade(grade);
 				break;
