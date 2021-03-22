@@ -3,12 +3,11 @@
 
 #include "Examination.h"
 class FinalExam : public Examination{
-  private:
+  	private:
 		double percent;
-  public:
+  	public:
 		FinalExam();
 		void setPercent(double);
 		double getPercent();
-
 };
 #endif

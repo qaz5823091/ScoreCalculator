@@ -1,3 +1,15 @@
 Ada 9 8 75 80
 Belly 7 9 82 75
-Allen 8 10 65 66
+Allen 10 10 100 100
+John 9 7 66 75
+Vivian 10 10 85 88
+Doggie 10 10 100 100
+Whooper 10 10 45 65
+Ezra 9 8 11 11
+Lauren 10 10 65 75
+Harding 10 10 100 100
+Elizabeth 5 8 70 65
+Trump 5 9 63 36
+Peter 10 9 23 36
+Hunter 10 10 85 88
+Benjamine 10 10 56 66

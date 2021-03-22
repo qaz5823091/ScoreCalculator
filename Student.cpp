@@ -4,8 +4,9 @@
 #include <iomanip>
 using namespace std;
 
+static int counter = 1;
+
 Student::Student() {
-	
 }
 
 Student::Student(string name,int quiz1,int quiz2,int mid,int fin) {
@@ -14,6 +15,7 @@ Student::Student(string name,int quiz1,int quiz2,int mid,int fin) {
 	this->mid.setPercent(0.25);
 	this->fin.setPercent(0.5);
 
+	setNumber(counter++);
 	setName(name);
 
 	this->quiz[0].setScore(quiz1);
@@ -23,6 +25,12 @@ Student::Student(string name,int quiz1,int quiz2,int mid,int fin) {
 	
 	setTotalScore();
 	setGrade();
+}
+
+void Student::setNumber(int number) {
+	this->number = number;
+
+	return ;
 }
 
 void Student::setName(string name) {
@@ -63,8 +71,34 @@ void Student::setGrade() {
 	}
 }
 
+void Student::setPR(int pr) {
+	this->pr = pr;
+
+	return ;
+}
+
+int Student::getNumber() {
+	return this->number;
+}
+
 string Student::getName() {
 	return this->name;
+}
+
+int Student::getQuiz1Score() {
+	return this->quiz[0].getScore();
+}
+
+int Student::getQuiz2Score() {
+	return this->quiz[1].getScore();
+}
+
+int Student::getMidScore() {
+	return this->mid.getScore();
+}
+
+int Student::getFinScore() {
+	return this->fin.getScore();
 }
 
 double Student::getTotalScore() {
@@ -75,13 +109,19 @@ char Student::getGrade() {
 	return this->grade;
 }
 
+int Student::getPR() {
+	return this->pr;
+}
+
 void Student::print() {
 	cout<<fixed<<setprecision(1)<<left;
+	cout<<setw(10)<<number;
 	cout<<setw(10)<<name;
 	cout<<setw(10)<<quiz[0].getScore();
 	cout<<setw(10)<<quiz[1].getScore();
 	cout<<setw(10)<<mid.getScore();
 	cout<<setw(10)<<fin.getScore();
 	cout<<setw(10)<<totalScore;
-	cout<<setw(10)<<grade<<endl;
+	cout<<setw(10)<<grade;
+	cout<<setw(10)<<pr<<endl;
 }

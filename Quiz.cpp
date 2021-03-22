@@ -5,7 +5,6 @@ using namespace std;
 
 Quiz::Quiz(){
 	Examination();
-
 }
 
 void Quiz::setPercent(double percent){
